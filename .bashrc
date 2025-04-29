@@ -4,4 +4,17 @@ export PATH=~/.local/bin/env:${PATH} # uv
 export PATH=~/.fzf/bin:${PATH}
 
 eval "$(starship init ${SHELL})"
-eval "$(fzf --bash)"
+
+case $(basename $(which ${SHELL})) in
+"bash")
+  shell_opt="--bash"
+  ;;
+
+"zsh")
+  shell_opt="--zsh"
+  ;;
+*)
+  echo "unknown"
+  ;;
+esac
+eval "$(fzf ${shell_opt})"
