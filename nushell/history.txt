@@ -1,0 +1,15 @@
+exit
+bash-env
+exit
+ls
+diff
+diff .cargo/
+git diff
+fzf
+ll
+ls
+ls -al
+nvim .bashrc
+exit
+docker
+exit
