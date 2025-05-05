@@ -1,0 +1,71 @@
+{
+    "workbench.colorTheme": "Alt Catppuccin Mocha",
+    "editor.fontFamily": "GeistMono Nerd Font, Fira Code, Hack Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
+    "redhat.telemetry.enabled": false,
+    // python related
+    "jupyter.askForKernelRestart": false,
+    "notebook.output.scrolling": true,
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.formatOnType": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": "always"
+        },
+        "editor.wordBasedSuggestions": "off",
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.rulers": [
+            88
+        ],
+    },
+    "python.languageServer": "Pylance",
+    "python.analysis.ignore": [
+        "*"
+    ], // Disable Pylance linting
+    "vsintellicode.python.completionsEnabled": true,
+    // lua related
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
+    // rust related
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.inlayHints.enabled": "offUnlessPressed",
+        // "editor.rulers": [60],
+    },
+    // "rust-analyzer.rustfmt.extraArgs": ["--config", "max_width=60"],
+    "rust-analyzer.diagnostics.enable": true,
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.checkOnSave": true,
+    // debugging related
+    "debug.allowBreakpointsEverywhere": true,
+    "terminal.integrated.fontSize": 9,
+    "jupyter.themeMatplotlibPlots": true,
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.sideBar.location": "right",
+    "application.shellEnvironmentResolutionTimeout": 100,
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "docker.dockerPath": "/Applications/Docker.app/Contents/Resources/bin/docker",
+    "dev.containers.dockerPath": "/Applications/Docker.app/Contents/Resources/bin/docker",
+    // c++/cmake related
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.enable": true,
+    "C_Cpp.clang_format_path": "${workspaceFolder}/.clang-format",
+    "[cpp]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    // general settings
+    "editor.formatOnSave": true
+}
