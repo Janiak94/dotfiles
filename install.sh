@@ -13,6 +13,7 @@ echo "Tapping brew..."
 brew tap koekeishiya/formulae
 brew tap sambadevi/powerlevel9k
 brew tap homebrew/cask-fonts
+brew tap mhaeuser/mhaeuser
 
 ## Formulae
 echo "Installing brew formulae..."
@@ -40,8 +41,14 @@ brew install zsh-autosuggestions
 brew install zsh-fast-syntax-highlighting
 brew install zoxide
 brew install powerlevel9k
+brew install fzf
+brew install fd
+brew install bat
+brew install eza
 
 ### Nice to have
+brew install git-delta
+brew install luarocks
 # TODO
 
 ## Casks
@@ -73,6 +80,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Nvchad
 echo "Installing nvchad..."
 git clone https://github.com/NvChad/starter ~/.config/nvim
+
+# Battery-toolkit
+echo "Installing Battery-Toolkit"
+brew install battery-toolkit
 
 source $HOME/.zshrc
 
