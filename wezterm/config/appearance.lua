@@ -21,6 +21,7 @@ return {
    -- color scheme
    -- colors = colors,
    color_scheme = 'catppuccin-mocha',
+   -- window_background_opacity = 0.98,
    window_background_opacity = 0.98,
 
    -- background
