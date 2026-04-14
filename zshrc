@@ -1,17 +1,14 @@
-# Source zsh plugins
-source $(brew --prefix)/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(pyenv init -)"
 
 # Bob, neovim version manager
 export PATH="${PATH}:${HOME}/.local/share/bob/nvim-bin"
 
+export PATH="$PATH:${HOME}/go/bin"
+
 export PATH="${PATH}:/Applications/Docker.app/Contents/Resources/bin"
 
-export NVIM_APPNAME="nvim-lazyvim"
+export PATH="$PATH:${HOME}/.local/TokenUpdater"
 
 export VCPKG_ROOT=$HOME/vcpkg
 
@@ -80,7 +77,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 #   exec tmux
 # fi
 
+
 # -- fzf configuration --
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
@@ -90,8 +89,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
-source $HOME/git/external/fzf-git.sh/fzf-git.sh
 
 _fzf_comprun() {
   local command=$1
@@ -121,7 +118,7 @@ _fzf_compgen_dir() {
 export BAT_THEME=1337
 
 # Created by `pipx` on 2024-07-13 18:04:50
-export PATH="$PATH:/Users/jensnilsson/.local/bin"
+export PATH="$PATH:${HOME}/.local/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
