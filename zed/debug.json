@@ -1,0 +1,37 @@
+// Some example tasks for common languages.
+//
+// For more documentation on how to configure debug tasks,
+// see: https://zed.dev/docs/debugger
+[
+  {
+    "adapter": "Debugpy",
+    "label": "Debug current Python test case",
+    "request": "launch",
+    "args": ["$ZED_FILE::$ZED_SYMBOL"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "module": "pytest",
+  },
+  {
+    "label": "Debug active Python file",
+    "adapter": "Debugpy",
+    "program": "$ZED_FILE",
+    "request": "launch",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "Debug active JavaScript file",
+    "adapter": "JavaScript",
+    "program": "$ZED_FILE",
+    "request": "launch",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "type": "pwa-node",
+  },
+  {
+    "label": "JavaScript debug terminal",
+    "adapter": "JavaScript",
+    "request": "launch",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "console": "integratedTerminal",
+    "type": "pwa-node",
+  },
+]

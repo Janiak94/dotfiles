@@ -1,0 +1,62 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+[
+  {
+    "label": "LazyGit",
+    "command": "lazygit",
+    "shell": {
+      "program": "sh",
+    },
+    "hide": "on_success",
+    "reveal_target": "center",
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+  },
+  {
+    "label": "Pytest: Project",
+    "command": "hatch",
+    "args": ["test", "-vv"],
+    "hide": "on_success",
+    "allow_concurrent_runs": true,
+  },
+  {
+    "label": "Pytest: Current File",
+    "command": "hatch",
+    "args": ["test", "-vv", "$ZED_FILE"],
+    "hide": "on_success",
+    "allow_concurrent_runs": true,
+  },
+  {
+    "label": "Pytest: Current Test",
+    "command": "hatch",
+    "args": ["test", "-vv", "$ZED_FILE::$ZED_SYMBOL"],
+    "hide": "on_success",
+    "allow_concurrent_runs": true,
+  },
+  {
+    "label": "MyPy: Check",
+    "command": "hatch",
+    "args": ["run", "types:check"],
+    "hide": "on_success",
+  },
+  {
+    "label": "MyPy: Check - Extended",
+    "command": "hatch",
+    "env": { "MYPYPATH": "$ZED_WORKTREE_ROOT/src" },
+    "args": [
+      "run",
+      "types:check",
+      "--explicit-package-bases",
+      "--follow-untyped-imports",
+      "--show-column-numbers",
+    ],
+    "hide": "on_success",
+  },
+  {
+    "label": "Docs: Build",
+    "command": "hatch",
+    "args": ["run", "docs:build", "--skip-url-validation"],
+    "hide": "on_success",
+  },
+]
